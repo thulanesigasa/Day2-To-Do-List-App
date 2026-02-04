@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple, elegant To-Do List application.">
+    <title>Day 2: To-Do List App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>To-Do List</h1>
+            <p>Stay organized, stay productive.</p>
+        </header>
+
+        <div class="input-group">
+            <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
+            <button id="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+
+        <div class="controls">
+            <span id="pending-count">You have 0 pending tasks</span>
+            <button id="clear-btn">Clear All</button>
+        </div>
+
+        <ul class="task-list" id="task-list">
+            <!-- Tasks will be added here dynamically -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

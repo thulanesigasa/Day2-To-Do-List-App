@@ -17,25 +17,139 @@
 
 <body>
 
-    <div class="container">
-        <header>
-            <h1>To-Do List</h1>
-            <p>Stay organized, stay productive.</p>
-        </header>
+    <!-- Custom Popup Modal -->
+    <div id="custom-popup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <i class="fas fa-exclamation-circle popup-icon"></i>
+            <h3>Oops! Incomplete Task</h3>
+            <p>Please enter a task description <strong>AND</strong> select a due date.</p>
+            <button id="close-popup">Got it</button>
+        </div>
+    </div>
 
-        <div class="input-group">
-            <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
-            <button id="add-btn"><i class="fas fa-plus"></i></button>
+    <div class="main-layout">
+        <!-- Animation Section (Left/Top) -->
+        <div class="animation-container">
+            <!-- Reuse existing dodecahedron code -->
+            <div class="mil-dodecahedron">
+                <!-- ... (Structure remains same, shortening for brevity in edit if possible, but write_to_file needs full content usually. 
+                      Since I'm overwriting, I must include all lines. I will copy the geometry from previous file.) -->
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mil-pentagon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </div>
 
-        <div class="controls">
-            <span id="pending-count">You have 0 pending tasks</span>
-            <button id="clear-btn">Clear All</button>
-        </div>
+        <!-- App Container (Right/Bottom) -->
+        <div class="container">
+            <header>
+                <h1>To-Do List</h1>
+                <p>Stay organized, stay productive.</p>
+            </header>
 
-        <ul class="task-list" id="task-list">
-            <!-- Tasks will be added here dynamically -->
-        </ul>
+            <div class="input-wrapper">
+                <!-- Task Input -->
+                <div class="input-group">
+                    <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
+                </div>
+
+                <!-- Date/Time Input -->
+                <div class="input-group date-group">
+                    <input type="datetime-local" id="task-date" class="date-input">
+                    <button id="add-btn"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+
+            <div class="controls">
+                <span id="pending-count">You have 0 pending tasks</span>
+                <button id="clear-btn">Clear All</button>
+            </div>
+
+            <ul class="task-list" id="task-list">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+        </div>
     </div>
 
     <script src="script.js"></script>
